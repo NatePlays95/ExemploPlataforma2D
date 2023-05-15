@@ -1,0 +1,14 @@
+Feito com Godot 3.5 (LTS)
+
+- Jogador vira na direção do movimento
+- Jogador tem sprites para andar e saltar
+- Jogador só pode pular quando estiver no chão
+- Plataformas semissólidas (por baixo)
+- Reiniciar a fase quando jogador encostar numa bala
+- Inimigos "tronco" são estáticos
+- Inimigos "tronco" atiram se o jogador estiver em "linha de visão"
+- Inimigos "tronco" são destruídos se o jogador pular em cima da cabeça deles
+- Jogador coleta frutas da fase
+- Tela de fim se o jogador coletar todas as frutas
+
+Bonus
