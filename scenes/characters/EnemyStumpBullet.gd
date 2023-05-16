@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-export var SPEED : float = 140
+export var SPEED : float = 210
 onready var sprite : Sprite = $Sprite
 var direction = Vector2.LEFT
 

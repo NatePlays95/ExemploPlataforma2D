@@ -177,6 +177,10 @@ func damage():
 
 
 func destroy():
+	var tween = get_tree().create_tween()
+	tween.tween_interval(1.0)
+	tween.tween_callback(get_tree(), "reload_current_scene")
+	
 	queue_free()
 
 
