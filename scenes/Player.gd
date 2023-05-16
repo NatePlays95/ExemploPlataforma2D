@@ -21,7 +21,7 @@ func _ready():
 	pass
 
 
-func _process(dt):
+func _process(_dt):
 	_process_input()
 	_process_animation()
 
@@ -98,13 +98,14 @@ func _apply_movement(dt):
 	#jump
 	if grounded and Input.is_action_just_pressed("ui_up"):
 			velocity.y = -JUMP_SPEED
-			print_debug("jump")
+			#print_debug("jump")
 	#jump release
 	if not grounded:
 		if Input.is_action_just_released("ui_up") and velocity.y < -JUMP_RELEASE_SPEED:
 			velocity.y = -JUMP_RELEASE_SPEED
 	
 	#apply
+# warning-ignore:return_value_discarded
 	move_and_slide(velocity, Vector2.UP)
 	if is_on_floor():
 		velocity.y = 0

@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://addons/PixelAdventure/Background/BrownFull.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Parallax.gd" type="Script" id=2]
 [ext_resource path="res://resources/Tileset1.tres" type="TileSet" id=3]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Collectable.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Level.gd" type="Script" id=7]
 
 [node name="Level" type="Node2D"]
+script = ExtResource( 7 )
+REQUIRED_FRUIT = 16
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource( 2 )
@@ -61,6 +65,64 @@ position = Vector2( 288, 96 )
 
 [node name="Objects" type="CanvasLayer" parent="."]
 layer = 5
+
+[node name="Collectables" type="Node2D" parent="Objects"]
+
+[node name="Collectable" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 72, 72 )
+animation = "kiwi"
+
+[node name="Collectable2" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 104, 72 )
+animation = "kiwi"
+
+[node name="Collectable3" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 136, 72 )
+animation = "kiwi"
+
+[node name="Collectable4" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 168, 72 )
+animation = "kiwi"
+
+[node name="Collectable13" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 88, 104 )
+animation = "kiwi"
+
+[node name="Collectable14" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 120, 104 )
+animation = "kiwi"
+
+[node name="Collectable15" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 152, 104 )
+animation = "kiwi"
+
+[node name="Collectable16" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 184, 104 )
+animation = "kiwi"
+
+[node name="Collectable5" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 328, 200 )
+
+[node name="Collectable6" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 360, 200 )
+
+[node name="Collectable7" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 392, 200 )
+
+[node name="Collectable8" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 424, 200 )
+
+[node name="Collectable9" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 312, 168 )
+
+[node name="Collectable10" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 344, 168 )
+
+[node name="Collectable11" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 376, 168 )
+
+[node name="Collectable12" parent="Objects/Collectables" instance=ExtResource( 6 )]
+position = Vector2( 408, 168 )
 
 [node name="Player" parent="Objects" instance=ExtResource( 4 )]
 position = Vector2( 136, 144 )
