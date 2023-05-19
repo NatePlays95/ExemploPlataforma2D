@@ -16,5 +16,5 @@ func update_victory():
 	if obtained_fruit >= REQUIRED_FRUIT:
 # warning-ignore:return_value_discarded
 		var tween = get_tree().create_tween()
-		tween.tween_interval(2.0)
+		tween.tween_interval(0.5)
 		tween.tween_callback(get_tree(), "change_scene", ["res://scenes/End.tscn"])
