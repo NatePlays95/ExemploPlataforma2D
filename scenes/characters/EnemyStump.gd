@@ -122,8 +122,7 @@ func _on_AnimatedSprite_animation_finished():
 	if animsprite.animation == "hit":
 		_destroy()
 	elif animsprite.animation == "shoot":
-		current_state = STATES.IDLE
-		idle_timer = 0.8
+		current_state = STATES.RUN
 
 
 func _on_AnimatedSprite_frame_changed():

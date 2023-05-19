@@ -72,6 +72,10 @@ func _process_particles():
 
 
 func _physics_process(dt):
+	if animsprite.animation == "hit":
+		_hit_movement(dt)
+		return
+	
 	_test_for_bounce(dt)
 	_test_for_ground(dt)
 	_apply_movement(dt)
@@ -170,9 +174,17 @@ func _handle_collisions(_dt):
 				damage()
 
 
+func _hit_movement(dt):
+	velocity.x = 0
+	velocity.y += GRAVITY * dt
+	rotation_degrees += dt * 180
+	move_and_slide(velocity, Vector2.UP)
+
+
 func damage():
 	print_debug("damage")
 	animsprite.play("hit")
+	velocity.y = -200
 	$CollisionShape2D.disabled = true
 
 

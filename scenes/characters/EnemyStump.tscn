@@ -230,7 +230,7 @@ animations = [ {
 extents = Vector2( 11, 11 )
 
 [sub_resource type="RectangleShape2D" id=46]
-extents = Vector2( 11, 2.5 )
+extents = Vector2( 13, 5.5 )
 
 [node name="EnemyStump" type="KinematicBody2D"]
 collision_layer = 32
@@ -251,7 +251,7 @@ collision_mask = 0
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BounceStaticBody"]
-position = Vector2( 0, -8.5 )
+position = Vector2( 0, -5.5 )
 shape = SubResource( 46 )
 
 [node name="FloorDetectorsLeft" type="Node2D" parent="."]
